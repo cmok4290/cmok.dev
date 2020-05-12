@@ -7,7 +7,6 @@ import Contact from "./Contact";
 import Explore from "./Explore";
 import { Switch, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import { Helmet } from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends React.Component {
@@ -15,9 +14,6 @@ class App extends React.Component {
   render() {
     return (
       <Container fluid>
-        <Helmet>
-          <title>Chheany Mok</title>
-        </Helmet>
         <Navigation/>
         <Switch>
           <Route path="/me"><AboutMe/></Route>
