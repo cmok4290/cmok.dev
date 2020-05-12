@@ -14,11 +14,13 @@ class App extends React.Component {
     return (
       <Container fluid>
         <Navigation/>
-        <Route path="/me"><AboutMe/></Route>
-        <Route path="/projects"><Projects/></Route>
-        <Route path="/contact"><Contact/></Route>
-        <Route path="/explore"><Explore/></Route>
-        <Route path="/"><Home/></Route>
+        <Switch>
+          <Route path="/me"><AboutMe/></Route>
+          <Route path="/projects"><Projects/></Route>
+          <Route path="/contact"><Contact/></Route>
+          <Route path="/explore"><Explore/></Route>
+          <Route path="/"><Home/></Route>
+        </Switch>
       </Container>
     );
   }

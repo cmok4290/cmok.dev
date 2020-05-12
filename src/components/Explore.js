@@ -47,9 +47,9 @@ class TerminalWrapper {
 }
 
 const server = "http://localhost:8080";
-let loaderInterval = null;
-let loaderMessage = "";
-
+//let loaderInterval = null;
+//let loaderMessage = "";
+/*
 function startLoader(term, message) {
   if (message === void 0) {
     message = loaderMessage;
@@ -71,7 +71,7 @@ function stopLoader() {
   clearInterval(loaderInterval);
   loaderInterval = null;
 }
-
+*/
 function connectToSocket(server) {
   return new Promise(res => {
     const socket = io(server);
