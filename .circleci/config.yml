@@ -32,7 +32,7 @@ jobs:
       - npm-build
       - run:
           name: Netlify Deploy
-          command: ../node_modules/.bin/netlify deploy --dir=build
+          command: ./node_modules/.bin/netlify deploy --dir=build
   release:
     executor: node-executor
     working_directory: ~/project
@@ -40,7 +40,7 @@ jobs:
       - npm-build
       - run:
           name: Netlify Deploy
-          command: ../node_modules/.bin/netlify deploy --prod --dir=build
+          command: ./node_modules/.bin/netlify deploy --prod --dir=build
 
 workflows:
     build-deploy:
