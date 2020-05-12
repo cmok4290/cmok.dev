@@ -1,7 +1,12 @@
 .custom-nav a {
+  width: 100px;
   color: #ffffff;
+  text-align: center;
 }
 
 .custom-nav a:hover {
   background: #ffffff;
+  color: #424242;
+  opacity: 0.80;
+  border-radius: 5px;
 }
