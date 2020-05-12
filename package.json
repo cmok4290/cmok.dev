@@ -10,7 +10,6 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.8.6",
-    "react-helmet": "^6.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.4.1",
     "socket.io": "^2.3.0",
