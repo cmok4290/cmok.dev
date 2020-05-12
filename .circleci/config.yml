@@ -51,8 +51,6 @@ workflows:
                 ignore:
                   - master
         - release:
-            requires:
-              - build
             filters:
               branches:
                 only:
