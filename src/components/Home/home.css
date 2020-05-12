@@ -1,7 +1,30 @@
 body {
-  background: url('../../assets/4k-astrology-1146134-1920-1080.jpg') no-repeat center center fixed;
+  background: url('../../assets/4k-astrology-1146134-6000-3375.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+
+.home {
+  height: 95vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.pexel p {
+  font-size: .8em;
+  align-self: center;
+  color: #ffffff;
+  margin: 15px;
+}
+
+.pexel a {
+  color: #ffffff;
+}
+
+.pexel a:hover {
+  color: #ffffff;
+  border-radius: 5px;
 }
