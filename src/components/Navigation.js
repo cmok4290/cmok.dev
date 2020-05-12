@@ -1,9 +1,10 @@
 import React from 'react';
-//import Container from "react-bootstrap/Container";
+import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 
 export default function Navigation() {
   return (
+    <Container fluid>
       <Nav className="justify-content-center">
         <Nav.Item>
           <Nav.Link href="/">cmok.dev</Nav.Link>
@@ -21,6 +22,7 @@ export default function Navigation() {
           <Nav.Link href="/explore">explore</Nav.Link>
         </Nav.Item>
       </Nav>
+    </Container>
   );
 };
 
