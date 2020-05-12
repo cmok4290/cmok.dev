@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.9.0"
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "netlify-cli": "^2.50.0"
   }
 }
