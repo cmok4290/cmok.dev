@@ -1,6 +1,6 @@
 {
-  "name": "moksha-frontend",
-  "version": "0.1.0",
+  "name": "react-portfolio",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.4.1",
