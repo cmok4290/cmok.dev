@@ -1,6 +1,6 @@
 import React from "react";
 import { ForceGraph3D } from "react-force-graph";
-import data from "../datasets/aboutme.json";
+import data from "../datasets/aboutme.js";
 import "./aboutme.css";
 
 export default function AboutMe() {
