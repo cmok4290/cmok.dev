@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "./Navigation/Navigation";
 import Home from "./Home/Home";
 import AboutMe from "./AboutMe/AboutMe";
-import Projects from "./Projects";
+import Projects from "./Projects/Projects";
 import Contact from "./Contact";
 import Explore from "./Explore";
 import { Switch, Route } from "react-router-dom";
