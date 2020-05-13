@@ -1,5 +1,6 @@
 import React from "react";
 import { ForceGraph3D } from "react-force-graph";
+import SpriteText from "three-spritetext";
 import data from "../datasets/aboutme.js";
 import "./aboutme.css";
 
@@ -28,6 +29,19 @@ export default function AboutMe() {
       nodeLabel="id"
       nodeAutoColorBy="group"
       onNodeClick={handleClick}
+      linkThreeObjectExtend={true}
+      linkThreeObject={link => {
+        const sprite = new SpriteText(`${link.source}`);
+        sprite.color = 'lightgrey';
+        sprite.textHeight = 1.5;
+        return sprite;
+      }}
+      linkPositionUpdate={(sprite, { start, end }) => {
+        const pos = Object.assign(...["x","y","z"].map(c => ({
+          [c]: start[c] + 5
+        })));
+        Object.assign(sprite.position, pos);
+      }}
       showNavInfo={true}
      /> 
     </div>

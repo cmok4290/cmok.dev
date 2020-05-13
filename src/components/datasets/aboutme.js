@@ -12,7 +12,7 @@ const nodes = [
   "Fantasy Football", "Weaving", "Cyber Security", "Bug Bounty",
   "Japanese", "Khmer", "Spanish", "Golf", "Soccer", "Basketball",
   "Cooking", "Linux", "C", "C++", "C#", "Python", "Java", "Ruby",
-  "Golang", "Javascript", "Common Lisp", "Vim"
+  "Javascript", "Vim"
 ];
 
 const reverse = false;
