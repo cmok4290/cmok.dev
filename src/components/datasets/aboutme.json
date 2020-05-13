@@ -1,0 +1,26 @@
+{
+  "nodes": [
+    {"id": "Me", "group": 1},
+    {"id": "Food", "group": 2},
+    {"id": "Spicy", "group": 2},
+    {"id": "Entertainment", "group": 3},
+    {"id": "Anime", "group": 4},
+    {"id": "Manga", "group": 4},
+    {"id": "Music", "group": 4},
+    {"id": "Guitar", "group": 4},
+    {"id": "Drums", "group": 4},
+    {"id": "Sports", "group": 4},
+    {"id": "Engineering", "group": 5},
+    {"id": "Math", "group": 6},
+    {"id": "Science", "group": 7},
+    {"id": "Technology", "group": 8}
+  ],
+  "links": [
+    {"source": "Me", "target": "Food", "value": 2},
+    {"source": "Me", "target": "Entertainment", "value": 2},
+    {"source": "Me", "target": "Engineering", "value": 2},
+    {"source": "Me", "target": "Math", "value": 2},
+    {"source": "Me", "target": "Science", "value": 2},
+    {"source": "Me", "target": "Technology", "value": 2}
+  ]
+}
