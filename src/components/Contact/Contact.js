@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf } from "@fortawesome/free-regular-svg-icons";
 import {
   faDiscord,
   faGithub,
@@ -14,6 +15,12 @@ import Tooltip from "react-bootstrap/Tooltip";
 import "./contact.css";
 
 const data = [
+  {
+    "url": "#",
+    "icon": faFilePdf,
+    "target": false,
+    "tooltip": "resume"
+  },
   {
     "url": "#",
     "icon": faDiscord,
