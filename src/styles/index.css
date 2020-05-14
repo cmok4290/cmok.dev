@@ -1,3 +1,28 @@
 body, html {
+  background: url('../assets/4k-astrology-1146134-1920-1080.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   margin: 0px;
+}
+
+@media (max-width: 1280px) {
+  body {
+    background: url('../assets/4k-astrology-1146134-1280-720.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background: url('../assets/4k-astrology-1146134-640-360.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
 }
