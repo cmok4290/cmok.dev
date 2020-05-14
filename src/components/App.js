@@ -3,7 +3,7 @@ import Navigation from "./Navigation/Navigation";
 import Home from "./Home/Home";
 import AboutMe from "./AboutMe/AboutMe";
 import Projects from "./Projects/Projects";
-import Contact from "./Contact";
+import Contact from "./Contact/Contact";
 import Explore from "./Explore";
 import { Switch, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
