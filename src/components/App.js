@@ -4,7 +4,7 @@ import Home from "./Home/Home";
 import AboutMe from "./AboutMe/AboutMe";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
-import Explore from "./Explore";
+import Explore from "./Explore/Explore";
 import { Switch, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
