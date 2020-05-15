@@ -1,0 +1,14 @@
+.xterm {
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-left: 15px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.xterm-screen {
+}

@@ -2,12 +2,13 @@ import React from "react";
 import io from "socket.io-client";
 import { Terminal } from "xterm";
 import "xterm/css/xterm.css";
+import "./explore.css";
 
 class TerminalWrapper {
   constructor(socket) {
     this.terminal = new Terminal({
       cols: 80,
-      rows: 20,
+      rows: 55,
       experimentalCharAtlas: 'dynamic',
       fontFamily: 'Monaco, "Ubuntu Mono", "Courier New", Courier, monospace'
     });
