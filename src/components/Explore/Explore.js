@@ -19,6 +19,32 @@ class TerminalWrapper {
     this.socket = socket;
   }
 
+  // TODO: implement state to handle loader
+  /*
+  startLoader() {
+    const term = this.terminal;
+    let loaderInterval = null;
+    let loaderMessage = "Connecting...";
+
+    let counter = 0;
+    const loadingChars = ["|","/","-","\\"];
+    loaderInterval = setInterval(function () {
+      counter++;
+      let spinner = loadingChars[counter % loadingChars.length];
+      term.write(' \r\x1B[K' + spinner + ' ' + loaderMessage);
+    }, 80);
+
+    if (loaderInterval) {
+      clearInterval(loaderInterval);
+      loaderInterval = null;
+    }
+  }
+
+  stopLoader() {
+    console.log('stop loader...');
+  }
+  */
+
   startListening() {
     this.terminal.onData(data => this.sendInput(data));
     this.socket.on("output", data => {
@@ -48,34 +74,16 @@ class TerminalWrapper {
 }
 
 const server = `${process.env.REACT_APP_SERVER}`;
-//let loaderInterval = null;
-//let loaderMessage = "";
-/*
-function startLoader(term, message) {
-  if (message === void 0) {
-    message = loaderMessage;
-  }
-  loaderMessage = message;
-  if (loaderInterval) {
-    stopLoader();
-  }
-  let counter = 0;
-  const loadingChars = ["|","/","-","\\"];
-  loaderInterval = setInterval(function () {
-    counter++;
-    let spinner = loadingChars[counter % loadingChars.length];
-    term.write(' \r\x1B[K' + spinner + ' ' + loaderMessage);
-  }, 80);
-}
 
-function stopLoader() {
-  clearInterval(loaderInterval);
-  loaderInterval = null;
-}
-*/
 function connectToSocket(server) {
   return new Promise(res => {
-    const socket = io(server);
+    const socket = io(server, {
+      reconnection: true,
+      reconnectionAttempts: 10,
+      reconnectionDelay: 1000,
+      reconntionDelayMax: 5000,
+      timeout: 1000
+    });
     res(socket);
   });
 }
@@ -94,7 +102,6 @@ function start() {
 }
 
 class Explore extends React.Component {
-  
   componentDidMount() {
     start();
   }
