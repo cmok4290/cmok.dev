@@ -2,12 +2,13 @@ import React from "react";
 import io from "socket.io-client";
 import { Terminal } from "xterm";
 import "xterm/css/xterm.css";
+import "./explore.css";
 
 class TerminalWrapper {
   constructor(socket) {
     this.terminal = new Terminal({
       cols: 80,
-      rows: 20,
+      rows: 54,
       experimentalCharAtlas: 'dynamic',
       fontFamily: 'Monaco, "Ubuntu Mono", "Courier New", Courier, monospace'
     });
@@ -17,6 +18,32 @@ class TerminalWrapper {
     });
     this.socket = socket;
   }
+
+  // TODO: implement state to handle loader
+  /*
+  startLoader() {
+    const term = this.terminal;
+    let loaderInterval = null;
+    let loaderMessage = "Connecting...";
+
+    let counter = 0;
+    const loadingChars = ["|","/","-","\\"];
+    loaderInterval = setInterval(function () {
+      counter++;
+      let spinner = loadingChars[counter % loadingChars.length];
+      term.write(' \r\x1B[K' + spinner + ' ' + loaderMessage);
+    }, 80);
+
+    if (loaderInterval) {
+      clearInterval(loaderInterval);
+      loaderInterval = null;
+    }
+  }
+
+  stopLoader() {
+    console.log('stop loader...');
+  }
+  */
 
   startListening() {
     this.terminal.onData(data => this.sendInput(data));
@@ -46,35 +73,17 @@ class TerminalWrapper {
   }
 }
 
-const server = "http://localhost:8080";
-//let loaderInterval = null;
-//let loaderMessage = "";
-/*
-function startLoader(term, message) {
-  if (message === void 0) {
-    message = loaderMessage;
-  }
-  loaderMessage = message;
-  if (loaderInterval) {
-    stopLoader();
-  }
-  let counter = 0;
-  const loadingChars = ["|","/","-","\\"];
-  loaderInterval = setInterval(function () {
-    counter++;
-    let spinner = loadingChars[counter % loadingChars.length];
-    term.write(' \r\x1B[K' + spinner + ' ' + loaderMessage);
-  }, 80);
-}
+const server = `${process.env.REACT_APP_SERVER}`;
 
-function stopLoader() {
-  clearInterval(loaderInterval);
-  loaderInterval = null;
-}
-*/
 function connectToSocket(server) {
   return new Promise(res => {
-    const socket = io(server);
+    const socket = io(server, {
+      reconnection: true,
+      reconnectionAttempts: 10,
+      reconnectionDelay: 1000,
+      reconntionDelayMax: 5000,
+      timeout: 1000
+    });
     res(socket);
   });
 }
@@ -93,7 +102,6 @@ function start() {
 }
 
 class Explore extends React.Component {
-  
   componentDidMount() {
     start();
   }
