@@ -8,7 +8,7 @@ class TerminalWrapper {
   constructor(socket) {
     this.terminal = new Terminal({
       cols: 80,
-      rows: 55,
+      rows: 54,
       experimentalCharAtlas: 'dynamic',
       fontFamily: 'Monaco, "Ubuntu Mono", "Courier New", Courier, monospace'
     });
@@ -47,7 +47,7 @@ class TerminalWrapper {
   }
 }
 
-const server = "http://localhost:8080";
+const server = `${process.env.REACT_APP_SERVER}`;
 //let loaderInterval = null;
 //let loaderMessage = "";
 /*
