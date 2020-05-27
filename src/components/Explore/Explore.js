@@ -1,6 +1,7 @@
 import React from "react";
 import io from "socket.io-client";
 import { Terminal } from "xterm";
+import { FitAddon } from "xterm-addon-fit";
 import "xterm/css/xterm.css";
 import "./explore.css";
 
@@ -8,7 +9,7 @@ class TerminalWrapper {
   constructor(socket) {
     this.terminal = new Terminal({
       cols: 80,
-      rows: 54,
+      rows: 20,
       experimentalCharAtlas: 'dynamic',
       fontFamily: 'Monaco, "Ubuntu Mono", "Courier New", Courier, monospace'
     });
@@ -17,6 +18,7 @@ class TerminalWrapper {
       foreground: "#F5F8FA"
     });
     this.socket = socket;
+    this.fitAddon = new FitAddon();
   }
 
   // TODO: implement state to handle loader
@@ -64,7 +66,9 @@ class TerminalWrapper {
   }
 
   attachTo(container) {
+    this.terminal.loadAddon(this.fitAddon);
     this.terminal.open(container);
+    this.fitAddon.fit();
     this.prompt();
   }
 
@@ -73,15 +77,15 @@ class TerminalWrapper {
   }
 }
 
-const server = `${process.env.REACT_APP_SERVER}`;
+const server = process.env.REACT_APP_SERVER;
 
 function connectToSocket(server) {
   return new Promise(res => {
     const socket = io(server, {
       reconnection: true,
-      reconnectionAttempts: 10,
+      reconnectionAttempts: 5,
       reconnectionDelay: 1000,
-      reconntionDelayMax: 5000,
+      reconnectionDelayMax: 5000,
       timeout: 1000
     });
     res(socket);

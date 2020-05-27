@@ -7,8 +7,12 @@
   bottom: 0;
   padding-left: 15px;
   padding-top: 10px;
+  padding-bottom: 20px;
   margin-top: 20px;
+  overflow: hidden;
 }
 
 .xterm-screen {
+  width: 100%;
+  height: auto;
 }
