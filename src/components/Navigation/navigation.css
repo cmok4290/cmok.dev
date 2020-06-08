@@ -1,11 +1,21 @@
-.custom-nav a {
-  width: 100px;
-  color: #ffffff;
-  text-align: center;
+.custom-navbar {
+  background-color: #050520;
+  opacity: 0.8;
 }
 
-.custom-nav a:hover {
-  background: #ffffff;
-  color: #424242;
-  opacity: 0.80;
+.custom-navbar .navbar-brand {
+  margin-left: 15px;
+  margin-right: 25px;
+}
+
+.custom-navbar .navbar-nav .nav-item {
+  color: #ffffff;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.custom-navbar .nav-item.active .nav-link,
+.custom-navbar .nav-item:hover .nav-link {
+  text-decoration: underline;
 }

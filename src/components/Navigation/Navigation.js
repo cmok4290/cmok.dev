@@ -1,29 +1,29 @@
-import React from 'react';
-import Container from "react-bootstrap/Container";
+import React from "react";
 import Nav from "react-bootstrap/Nav";
-import "./navigation.css"
+import Navbar from "react-bootstrap/Navbar";
+import "./navigation.css";
 
 export default function Navigation() {
   return (
-    <Container fluid>
-      <Nav className="justify-content-center custom-nav">
-        <Nav.Item>
-          <Nav.Link href="/">cmok.dev</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/me">me</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/projects">projects</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/contact">contact</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="/explore">explore</Nav.Link>
-        </Nav.Item>
-      </Nav>
-    </Container>
+    <Navbar variant="dark" expand="lg" fixed="top" className="custom-navbar">
+      <Navbar.Brand href="/home">cmok</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav>
+          <Nav.Item>
+            <Nav.Link href="/me">me</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/projects">projects</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/contact">contact</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/explore">explore</Nav.Link>
+          </Nav.Item>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
-};
-
+}
