@@ -1,22 +1,22 @@
 .home {
-  height: 95vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  min-height: 200%;
+  height: 100%;
+}
+
+.pexel {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  margin-right: 15px;
 }
 
 .pexel p {
-  font-size: .8em;
-  align-self: center;
-  color: #ffffff;
+  font-size: 0.8em;
   margin: 15px;
 }
 
-.pexel a {
-  color: #ffffff;
-}
-
+.pexel p,
+.pexel a,
 .pexel a:hover {
   color: #ffffff;
-  border-radius: 5px;
 }
