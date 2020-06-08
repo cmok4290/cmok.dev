@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "./Navigation/Navigation";
 import Home from "./Home/Home";
 import AboutMe from "./AboutMe/AboutMe";
-import Projects from "./Projects/Projects";
+import Hire from "./Hire/Hire";
 import Contact from "./Contact/Contact";
 import Explore from "./Explore/Explore";
 import { Switch, Route } from "react-router-dom";
@@ -10,17 +10,26 @@ import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends React.Component {
-
   render() {
     return (
       <Container fluid>
-        <Navigation/>
+        <Navigation />
         <Switch>
-          <Route path="/me"><AboutMe/></Route>
-          <Route path="/projects"><Projects/></Route>
-          <Route path="/contact"><Contact/></Route>
-          <Route path="/explore"><Explore/></Route>
-          <Route path="/"><Home/></Route>
+          <Route path="/me">
+            <AboutMe />
+          </Route>
+          <Route path="/hire">
+            <Hire />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/explore">
+            <Explore />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
         </Switch>
       </Container>
     );

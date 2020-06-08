@@ -14,7 +14,7 @@ export default function Navigation() {
             <Nav.Link href="/me">me</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link href="/projects">projects</Nav.Link>
+            <Nav.Link href="/hire">hire</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link href="/contact">contact</Nav.Link>
