@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ForceGraph3D } from "react-force-graph";
 import SpriteText from "three-spritetext";
 import data from "../datasets/aboutme.js";
@@ -19,6 +19,40 @@ export default function AboutMe() {
     },
     [fgRef]
   );
+  const size = useWindowSize();
+
+  /**
+   * Gabe Ragland
+   * https://usehooks.com/useWindowSize
+   * This hook returns an object containing the window's width and height
+   */
+  function useWindowSize() {
+    const isClient = typeof window === "object";
+
+    function getSize() {
+      return {
+        width: isClient ? window.innerWidth : undefined,
+        height: isClient ? window.innerHeight : undefined,
+      };
+    }
+
+    const [windowSize, setWindowSize] = useState(getSize);
+
+    useEffect(() => {
+      if (!isClient) {
+        return false;
+      }
+
+      function handleResize() {
+        setWindowSize(getSize());
+      }
+
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []); // empty array ensures that effect is only run on mount and unmount
+
+    return windowSize;
+  }
 
   return (
     <div className="about-me">
@@ -27,8 +61,8 @@ export default function AboutMe() {
         ref={fgRef}
         graphData={data}
         backgroundColor="#1d2649"
-        width={window.innerWidth}
-        height={window.innerHeight - 6}
+        width={size.width}
+        height={size.height}
         nodeLabel="id"
         nodeAutoColorBy="group"
         onNodeClick={handleClick}
