@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ForceGraph3D } from "react-force-graph";
 import SpriteText from "three-spritetext";
+import { ReactComponent as GitHubIcon } from "../../assets/github-corner-right.svg";
 import data from "../datasets/aboutme.js";
 import "./aboutme.css";
 
@@ -49,13 +50,22 @@ export default function AboutMe() {
 
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
-    }, []); // empty array ensures that effect is only run on mount and unmount
+    }); // empty array ensures that effect is only run on mount and unmount
 
     return windowSize;
   }
 
   return (
     <div className="about-me">
+      <a
+        href="https://github.com/vasturiano/react-force-graph"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="github-corner"
+        aria-label="View source on GitHub"
+      >
+        <GitHubIcon fill="#fff" />
+      </a>
       <ForceGraph3D
         className="force-graph"
         ref={fgRef}

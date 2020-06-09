@@ -1,5 +1,5 @@
 .custom-navbar {
-  background-color: none;
+  width: 50%;
 }
 
 .custom-navbar .navbar-brand {
@@ -18,4 +18,10 @@
 .custom-navbar .nav-item.active .nav-link,
 .custom-navbar .nav-item:hover .nav-link {
   text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .custom-navbar {
+    width: 100%;
+  }
 }
