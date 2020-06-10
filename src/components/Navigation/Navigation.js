@@ -4,8 +4,14 @@ import Navbar from "react-bootstrap/Navbar";
 import "./navigation.css";
 
 export default function Navigation() {
+  const curPath = window.location.pathname;
   return (
-    <Navbar variant="dark" expand="lg" fixed="top" className="custom-navbar">
+    <Navbar
+      variant="dark"
+      expand="lg"
+      fixed="top"
+      className={curPath === "/explore" ? "custom-navbar-alt" : "custom-navbar"}
+    >
       <Navbar.Brand href="/home">cmok</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
       <Navbar.Collapse id="basic-navbar-nav">
