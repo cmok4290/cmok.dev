@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ForceGraph3D } from "react-force-graph";
 import SpriteText from "three-spritetext";
-import { ReactComponent as GitHubIcon } from "../../assets/github-corner-right.svg";
+//import { ReactComponent as GitHubIcon } from "../../assets/github-corner-right.svg";
 import data from "../datasets/aboutme.js";
 import "./aboutme.css";
 
@@ -57,6 +57,7 @@ export default function AboutMe() {
 
   return (
     <div className="about-me">
+      {/* TODO: fix position
       <a
         href="https://github.com/vasturiano/react-force-graph"
         target="_blank"
@@ -66,6 +67,7 @@ export default function AboutMe() {
       >
         <GitHubIcon fill="#fff" />
       </a>
+      */}
       <ForceGraph3D
         className="force-graph"
         ref={fgRef}
