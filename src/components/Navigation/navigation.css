@@ -1,5 +1,11 @@
 .custom-navbar {
   width: 50%;
+  background-color: #212121;
+  opacity: 0.8;
+}
+
+.custom-navbar:hover {
+  opacity: 1;
 }
 
 .custom-navbar-alt {
@@ -9,7 +15,12 @@
 
 .custom-navbar .navbar-brand,
 .custom-navbar-alt .navbar-brand {
+  margin-left: 15px;
   margin-right: 25px;
+}
+
+.navbar-toggler {
+  margin-right: 15px;
 }
 
 .custom-navbar .navbar-nav .nav-item,
