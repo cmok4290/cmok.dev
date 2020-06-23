@@ -1,9 +1,9 @@
 .home {
-  min-height: 200%;
   height: 100%;
 }
 
 .pexel {
+  color: #fff;
   position: absolute;
   bottom: 5px;
   right: 5px;
