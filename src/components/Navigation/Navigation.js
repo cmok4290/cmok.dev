@@ -20,9 +20,11 @@ export default function Navigation() {
           <Nav.Item>
             <Nav.Link href="/contact">contact</Nav.Link>
           </Nav.Item>
+          {/*
           <Nav.Item>
             <Nav.Link href="/explore">explore</Nav.Link>
           </Nav.Item>
+          */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
