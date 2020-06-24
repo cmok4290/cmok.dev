@@ -10,46 +10,20 @@ class TerminalWrapper {
     this.terminal = new Terminal({
       cols: 80,
       rows: 20,
-      experimentalCharAtlas: 'dynamic',
-      fontFamily: 'Monaco, "Ubuntu Mono", "Courier New", Courier, monospace'
+      experimentalCharAtlas: "dynamic",
+      fontFamily: 'Monaco, "Ubuntu Mono", "Courier New", Courier, monospace',
     });
     this.terminal.setOption("theme", {
       background: "#202B33",
-      foreground: "#F5F8FA"
+      foreground: "#F5F8FA",
     });
     this.socket = socket;
     this.fitAddon = new FitAddon();
   }
 
-  // TODO: implement state to handle loader
-  /*
-  startLoader() {
-    const term = this.terminal;
-    let loaderInterval = null;
-    let loaderMessage = "Connecting...";
-
-    let counter = 0;
-    const loadingChars = ["|","/","-","\\"];
-    loaderInterval = setInterval(function () {
-      counter++;
-      let spinner = loadingChars[counter % loadingChars.length];
-      term.write(' \r\x1B[K' + spinner + ' ' + loaderMessage);
-    }, 80);
-
-    if (loaderInterval) {
-      clearInterval(loaderInterval);
-      loaderInterval = null;
-    }
-  }
-
-  stopLoader() {
-    console.log('stop loader...');
-  }
-  */
-
   startListening() {
-    this.terminal.onData(data => this.sendInput(data));
-    this.socket.on("output", data => {
+    this.terminal.onData((data) => this.sendInput(data));
+    this.socket.on("output", (data) => {
       this.write(data);
     });
   }
@@ -58,8 +32,7 @@ class TerminalWrapper {
     this.terminal.write(text);
   }
 
-  prompt() {
-  }
+  prompt() {}
 
   sendInput(input) {
     this.socket.emit("input", input);
@@ -80,13 +53,13 @@ class TerminalWrapper {
 const server = process.env.REACT_APP_SERVER;
 
 function connectToSocket(server) {
-  return new Promise(res => {
+  return new Promise((res) => {
     const socket = io(server, {
       reconnection: true,
       reconnectionAttempts: 5,
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
-      timeout: 1000
+      timeout: 1000,
     });
     res(socket);
   });
@@ -100,7 +73,7 @@ function startTerminal(container, socket) {
 
 function start() {
   const container = document.getElementById("xterm-container");
-  connectToSocket(server).then(socket => {
+  connectToSocket(server).then((socket) => {
     startTerminal(container, socket);
   });
 }
@@ -112,7 +85,9 @@ class Explore extends React.Component {
 
   render() {
     return (
-      <div id="xterm-container" className="xterm"></div>
+      <div className="explore">
+        <div id="xterm-container" className="xterm"></div>
+      </div>
     );
   }
 }
