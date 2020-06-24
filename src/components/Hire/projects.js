@@ -13,14 +13,7 @@ const projects = [
     author: "Chheany Mok",
     github: "https://github.com/cmok4290/react-portfolio",
     website: "https://cmok.dev",
-    tags: [
-      "wip",
-      "javascript",
-      "reactjs",
-      "frontend",
-      "web development",
-      "netlify",
-    ],
+    tags: ["javascript", "reactjs", "frontend", "web development", "netlify"],
   },
   {
     title: "Node Terminal",
