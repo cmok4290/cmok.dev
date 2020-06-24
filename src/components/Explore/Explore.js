@@ -109,10 +109,12 @@ class Explore extends React.Component {
 
   componentDidMount() {
     startLoader();
+    /*
     setTimeout(() => {
       start();
       this.setState({ loading: false });
     }, 1200);
+    */
   }
 
   render() {
