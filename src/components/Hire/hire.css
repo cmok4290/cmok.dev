@@ -1,0 +1,36 @@
+.hire {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.hire .search-header {
+  margin-top: 75px;
+}
+
+.hire .search-bar {
+}
+
+.hire .search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.hire .search-results .card {
+  width: 18rem;
+  background-color: #212121;
+  margin: 15px;
+}
+
+.badge {
+  margin-right: 0.5em;
+}
+
+.card-img {
+  opacity: 0.25;
+}
