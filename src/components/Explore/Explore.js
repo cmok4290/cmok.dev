@@ -78,17 +78,57 @@ function start() {
   });
 }
 
+function startLoader() {
+  const characters = ["|", "/", "-", "\\"];
+  let i = 0;
+  let spinner;
+  const terminal = new Terminal();
+  terminal.setOption("theme", {
+    background: "#202B33",
+    foreground: "#F5F8FA",
+  });
+  terminal.open(document.getElementById("xterm-container"));
+  setInterval((startInterval) => {
+    i += 1;
+    spinner = characters[i % characters.length];
+    terminal.write(spinner + " Connecting...\r");
+  }, 100);
+}
+
+function stopLoader() {
+  clearInterval();
+}
+
 class Explore extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+    };
+  }
+
   componentDidMount() {
-    start();
+    startLoader();
+    setTimeout(() => {
+      start();
+      this.setState({ loading: false });
+    }, 1200);
   }
 
   render() {
-    return (
-      <div className="explore">
-        <div id="xterm-container" className="xterm"></div>
-      </div>
-    );
+    if (this.state.loading) {
+      return (
+        <div className="explore">
+          <div id="xterm-container" className="xterm"></div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="explore">
+          <div id="xterm-container" className="xterm"></div>
+        </div>
+      );
+    }
   }
 }
 
