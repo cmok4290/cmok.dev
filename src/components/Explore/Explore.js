@@ -77,7 +77,7 @@ function start() {
     startTerminal(container, socket);
   });
 }
-
+/*
 function startLoader() {
   const characters = ["|", "/", "-", "\\"];
   let i = 0;
@@ -98,7 +98,7 @@ function startLoader() {
 function stopLoader() {
   clearInterval();
 }
-
+*/
 class Explore extends React.Component {
   constructor(props) {
     super(props);
@@ -108,8 +108,9 @@ class Explore extends React.Component {
   }
 
   componentDidMount() {
-    startLoader();
+    start();
     /*
+    startLoader();
     setTimeout(() => {
       start();
       this.setState({ loading: false });
