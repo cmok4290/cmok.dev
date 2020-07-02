@@ -6,7 +6,7 @@ import "./navigation.css";
 export default function Navigation() {
   //const curPath = window.location.pathname;
   return (
-    <Navbar variant="dark" expand="lg" fixed="top" className="custom-navbar">
+    <Navbar variant="dark" expand="lg" className="custom-navbar">
       <Navbar.Brand href="/">cmok</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
       <Navbar.Collapse id="basic-navbar-nav">
