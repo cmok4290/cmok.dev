@@ -6,12 +6,11 @@
   bottom: 0;
   padding-left: 25px;
   padding-top: 25px;
-  padding-bottom: 30px;
   margin-top: 24px;
   overflow: auto;
 }
 
 .xterm-screen {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
