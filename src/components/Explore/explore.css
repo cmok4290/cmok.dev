@@ -1,16 +1,23 @@
+.explore {
+}
+
+#xterm-container {
+  height: 100%;
+}
+
 .xterm {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding-left: 25px;
-  padding-top: 25px;
-  margin-top: 24px;
-  overflow: auto;
+  height: 100%;
+}
+
+.terminal {
+  height: 100%;
+}
+
+.xterm-viewport {
 }
 
 .xterm-screen {
-  width: 100%;
-  height: 100%;
+}
+
+.xterm-helpers {
 }
