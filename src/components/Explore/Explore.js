@@ -119,19 +119,11 @@ class Explore extends React.Component {
   }
 
   render() {
-    if (this.state.loading) {
-      return (
-        <div className="explore">
-          <div id="xterm-container" className="xterm"></div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="explore">
-          <div id="xterm-container" className="xterm"></div>
-        </div>
-      );
-    }
+    return (
+      <div className="explore">
+        <div id="xterm-container" className="xterm"></div>
+      </div>
+    );
   }
 }
 
