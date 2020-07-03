@@ -2,8 +2,8 @@ import React from "react";
 import io from "socket.io-client";
 import { Terminal } from "xterm";
 import { FitAddon } from "xterm-addon-fit";
-import "xterm/css/xterm.css";
-import "./explore.css";
+//import "xterm/css/xterm.css";
+//import "./explore.css";
 
 class TerminalWrapper {
   constructor(socket) {

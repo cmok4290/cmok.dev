@@ -8,7 +8,7 @@ import Explore from "./Explore/Explore";
 import { Switch, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./app.css";
+//import "./app.css";
 
 class App extends React.Component {
   render() {

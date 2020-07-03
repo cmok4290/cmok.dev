@@ -13,7 +13,7 @@ import Nav from "react-bootstrap/Nav";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import resume from "../../assets/cmok-0-0-7.pdf";
-import "./contact.css";
+//import "./contact.css";
 
 const data = [
   {

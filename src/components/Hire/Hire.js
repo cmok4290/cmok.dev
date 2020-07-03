@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import Badge from "react-bootstrap/Badge";
 import Fuse from "fuse.js";
 import projects from "./projects";
-import "./hire.css";
+//import "./hire.css";
 
 export default function Hire() {
   const [query, updateQuery] = useState("");
