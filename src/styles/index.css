@@ -16,6 +16,18 @@ html {
   height: 100%;
 }
 
+/* APP STYLES */
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+/* END APP STYLES */
+
 /* NAV STYLES */
 .custom-navbar {
   width: 100%;
@@ -58,6 +70,12 @@ html {
   left: 0;
 }
 /* END HOME STYLES */
+
+/* ABOUT ME STYLES */
+.about-me canvas {
+  position: fixed;
+}
+/* END ABOUT ME STYLES */
 
 /* MEDIA QUERIES */
 @media (max-width: 1280px) {
