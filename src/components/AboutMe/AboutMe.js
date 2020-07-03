@@ -3,7 +3,7 @@ import { ForceGraph3D } from "react-force-graph";
 import SpriteText from "three-spritetext";
 //import { ReactComponent as GitHubIcon } from "../../assets/github-corner-right.svg";
 import data from "../datasets/aboutme.js";
-import "./aboutme.css";
+//import "./aboutme.css";
 
 export default function AboutMe() {
   const { useRef, useCallback } = React;

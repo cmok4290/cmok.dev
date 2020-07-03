@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import "./navigation.css";
+//import "./navigation.css";
 
 export default function Navigation() {
   //const curPath = window.location.pathname;
