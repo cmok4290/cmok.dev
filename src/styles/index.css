@@ -16,6 +16,29 @@ html {
   height: 100%;
 }
 
+/* NAV STYLES */
+.custom-navbar {
+  width: 100%;
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+/* END NAV STYLES */
+
+/* HOME STYLES */
+#particles-js {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* END HOME STYLES */
+
+/* MEDIA QUERIES */
 @media (max-width: 1280px) {
   body {
     background: url("../assets/4k-astrology-1146134-1280-720.jpg") no-repeat
@@ -37,3 +60,4 @@ html {
     -o-background-size: cover;
   }
 }
+/* END MEDIA QUERIES */
