@@ -132,6 +132,19 @@ html {
 }
 /* END CONTACT STYLES */
 
+/* EXPLORE STYLES */
+#xterm-container {
+  height: 100%;
+}
+
+.xterm {
+  height: 100%;
+}
+
+.terminal {
+}
+/* END EXPLORE STYLES */
+
 /* MEDIA QUERIES */
 @media (max-width: 1280px) {
   body {
