@@ -79,6 +79,7 @@ html {
 .scene-nav-info {
   position: relative;
   top: 15px;
+  font-size: 1em;
   opacity: 1;
   z-index: 1;
 }
