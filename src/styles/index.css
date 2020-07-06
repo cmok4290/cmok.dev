@@ -32,10 +32,6 @@ html {
 .custom-navbar {
   width: 100%;
   background-color: #212121;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   z-index: 1000;
   opacity: 0.8;
 }
@@ -75,12 +71,18 @@ html {
 .about-me canvas {
   position: fixed;
 }
+
+.scene-nav-info {
+  background-color: #1d2649;
+  position: relative;
+  bottom: 0;
+  opacity: 1;
+}
 /* END ABOUT ME STYLES */
 
 /* HIRE STYLES */
 .hire {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +90,8 @@ html {
 }
 
 .hire .search-header {
-  margin-top: 75px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .hire .search-results {
@@ -112,7 +115,7 @@ html {
 /* CONTACT STYLES */
 .contact {
   width: 100%;
-  height: 100%;
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,16 +140,41 @@ html {
 /* END CONTACT STYLES */
 
 /* EXPLORE STYLES */
-#xterm-container {
-  height: 100%;
+.explore {
+  width: 100%;
 }
 
-.xterm {
+#xterm-container {
   height: 100%;
 }
 
 .terminal {
 }
+
+.xterm {
+}
+
+.xterm-viewport {
+}
+
+.xterm-screen {
+}
+
+.xterm-helpers {
+}
+
+.xterm-text-layer {
+}
+
+.xterm-selection-layer {
+}
+
+.xterm-link-layer {
+}
+
+.xterm-cursor-layer {
+}
+
 /* END EXPLORE STYLES */
 
 /* MEDIA QUERIES */

@@ -119,13 +119,8 @@ class Explore extends React.Component {
   }
 
   render() {
-    console.log(window.innerHeight);
-    console.log(window);
     return (
-      <div
-        className="explore"
-        style={{ height: window.innerHeight - 56 + "px" }}
-      >
+      <div className="explore">
         <div id="xterm-container"></div>
       </div>
     );
