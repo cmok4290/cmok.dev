@@ -70,13 +70,17 @@ html {
 /* ABOUT ME STYLES */
 .about-me canvas {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .scene-nav-info {
-  background-color: #1d2649;
   position: relative;
-  bottom: 0;
+  top: 15px;
   opacity: 1;
+  z-index: 1;
 }
 /* END ABOUT ME STYLES */
 
