@@ -35,7 +35,7 @@ export default function Hire() {
   return (
     <div className="hire">
       <div className="search-header">
-        <h1>What skills do you need?</h1>
+        <h2>What skills do you need?</h2>
       </div>
       <div className="search-bar">
         <input type="text" value={query} onChange={onSearch} />
